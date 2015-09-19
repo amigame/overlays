@@ -1,6 +1,6 @@
 {
 	"name": "app.ui.overlay",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "APP UI: Overlay",
 	"license": "MIT",
 	"main": "index.html",
