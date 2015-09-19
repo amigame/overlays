@@ -53,4 +53,14 @@ git pull git://github.com/app-ui/overlay.git master
 
 ## License
 
+Initiated by Makis Tracend ( [@tracend](http://github.com/tracend) )
+
+Distributed through [Makesites.org](http://makesites.org/)
+
+### Mentions
+
+Part of the [APP UI](http://github.com/app-ui) components.
+
+### License
+
 Released under the [MIT License](http://makesites.org/licenses/MIT)
