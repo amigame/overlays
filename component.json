@@ -15,6 +15,7 @@
 	],
 	"dependencies": {
 		"app" : "*",
+		"backbone.app": "*",
 		"webcomponentsjs": "*"
 	}
 }
