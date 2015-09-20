@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>&lt;ui-component&gt;</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Importing Web Component's Polyfill -->
+	<script src="../components/webcomponentsjs/webcomponents.min.js"></script>
+
+	<!-- Importing Custom Elements -->
+	<link rel="import" href="../index.html">
+
+	<!-- Example styles -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+	<h2>Overlay: Pulse</h2>
+	<p class="info">This overlay pulses in an infinite loop. Use the slider to change the animation's cycle duration.</p>
+	<code>
+		&lt;ui-overlay animation="pulse" duration="?"&gt;&lt;/ui-overlay&gt;
+	</code>
+
+	<p>Current Duration: <span id="duration">5</span> seconds.
+
+	<input type="range" min="0", max="10">
+
+	<!-- Custom Element -->
+	<ui-overlay animation="pulse" duration="5"></ui-overlay>
+
+
+	<!-- Example logic -->
+	<script type="text/javascript">
+	// elements
+	var display = document.getElementById('duration');
+	var input = document.getElementsByTagName('input')[0];
+	var overlay = document.getElementsByTagName('ui-overlay')[0];
+
+	// events
+	input.addEventListener("change", function(){
+		// new overlay
+		var duration = this.value;
+		// update attribute
+		overlay.setAttribute("duration", duration);
+		// update display
+		display.innerHTML = duration;
+	});
+
+	</script>
+</body>
+</html>
