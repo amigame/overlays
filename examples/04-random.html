@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>&lt;ui-component&gt;</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Importing Web Component's Polyfill -->
+	<script src="../components/webcomponentsjs/webcomponents.min.js"></script>
+
+	<!-- Importing Custom Elements -->
+	<link rel="import" href="../index.html">
+
+	<!-- Example styles -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+		<h2>Overlay: Random</h2>
+		<p class="info">This overlay picks a random background in intervals. As a convention, the backgrounds are set in classes with a 'layer-' prefix.</p>
+		<code>
+			&lt;ui-overlay animation="random" duration="2" random="3"&gt;&lt;/ui-overlay&gt;
+		</code>
+
+	<!-- Custom Element -->
+	<ui-overlay animation="random" duration="2" random="3"></ui-overlay>
+
+</body>
+</html>
