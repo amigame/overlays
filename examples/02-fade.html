@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>&lt;ui-component&gt;</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Importing Web Component's Polyfill -->
+	<script src="../components/webcomponentsjs/webcomponents.min.js"></script>
+
+	<!-- Importing Custom Elements -->
+	<link rel="import" href="../index.html">
+
+	<!-- Example styles -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+	<h2>Overlay: Fade</h2>
+	<p class="info">Click the button to spawn a new overlay, that will fade in 3 seconds and then automatically be removed from the DOM.</p>
+	<button>Hit me!</button>
+
+
+<!-- Example logic -->
+<script type="text/javascript">
+// elements
+var body = document.getElementsByTagName('body')[0];
+var button = document.getElementsByTagName('button')[0];
+
+// events
+button.addEventListener("click", function(){
+	// new overlay
+	var e = document.createElement('ui-overlay');
+	e.setAttribute("animation", "fade");
+	e.setAttribute("delay", 3);
+	e.setAttribute("duration", 2);
+	body.appendChild(e);
+});
+
+</script>
+
+</body>
+</html>
