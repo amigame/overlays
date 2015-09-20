@@ -1,5 +1,129 @@
-/* replace with component styles */
-
-.ui-component {
-
+ui-overlay {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  /* pass-through layer */
+}
+/* Animations */
+ui-overlay.pulse {
+  -webkit-animation: ui-overlay-fade-in 5s infinite alternate;
+  -moz-animation: ui-overlay-fade-in 5s infinite alternate;
+  -o-animation: ui-overlay-fade-in 5s infinite alternate;
+  animation: ui-overlay-fade-in 5s infinite alternate;
+}
+ui-overlay.fade {
+  -webkit-animation: ui-overlay-fade-out 2s 1 linear;
+  -moz-animation: ui-overlay-fade-out 2s 1 linear;
+  -o-animation: ui-overlay-fade-out 2s 1 linear;
+  animation: ui-overlay-fade-out 2s 1 linear;
+}
+ui-overlay[class^="layer-"],
+a[class*=" layer-"] {
+  -webkit-animation: ui-overlay-zero 2s 1 linear;
+  -moz-animation: ui-overlay-zero 2s 1 linear;
+  -o-animation: ui-overlay-zero 2s 1 linear;
+  animation: ui-overlay-zero 2s 1 linear;
+}
+/* fade in */
+@-webkit-keyframes ui-overlay-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes ui-overlay-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes ui-overlay-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ui-overlay-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* fade out */
+@-webkit-keyframes ui-overlay-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes ui-overlay-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes ui-overlay-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes ui-overlay-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* zero  */
+@-webkit-keyframes ui-overlay-zero {
+  0% {
+    width: auto;
+  }
+  100% {
+    width: auto;
+  }
+}
+@-moz-keyframes ui-overlay-zero {
+  0% {
+    width: auto;
+  }
+  100% {
+    width: auto;
+  }
+}
+@-o-keyframes ui-overlay-zero {
+  0% {
+    width: auto;
+  }
+  100% {
+    width: auto;
+  }
+}
+@keyframes ui-overlay-zero {
+  0% {
+    width: auto;
+  }
+  100% {
+    width: auto;
+  }
 }
