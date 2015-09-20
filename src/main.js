@@ -14,12 +14,14 @@
 		var animation = this.getAttribute("animation");
 		var delay = this.getAttribute("delay");
 		var duration = this.getAttribute("duration");
+		var random = this.getAttribute("random");
 
 		// gather options
 		var options = {
 			animation: animation || "static", // options: static, pulse, fade, random
 			delay: delay || 0,
-			duration: duration || 0
+			duration: duration || 0,
+			random: random || 0
 		};
 		// ...
 		options.el = this;
@@ -37,6 +39,8 @@
 	el.attributeChangedCallback = function(attr, oldVal, newVal) {
 		// prerequisite(s)
 		if(!this.view) return;
+		if( attr == "class") return;
+
 		// filter options?
 		this.view.options[attr] = newVal;
 		this.view.update();
